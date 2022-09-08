@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Single Price Grid Component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body{
+      min-height: 100vh;
+      font-family: 'Karla', sans-serif;
+      background-color: hsl(204, 43%, 93%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .grid-container{
+      width: 40%;
+      display: grid;
+      border-radius: 15px;
+      overflow: hidden;
+      grid-template-columns: repeat(2,1fr);
+      grid-template-areas: "grid1 grid1" "grid2 grid3";
+      margin-bottom: 20px;
+    }
+    @media(max-width:1000px){
+      .grid-container{
+        width: 60%;
+      }
+    }
+    @media(max-width:500px){
+      .grid-container{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    .grid-container>*{
+      padding: 30px;
+    }
+    .grid1{
+      grid-area: grid1;
+      background-color: white;
+    }
+    .grid1>p{
+      color: hsl(218, 22%, 67%);
+    }
+    .grid2{
+      grid-area: grid2;
+      background-color: hsl(179, 62%, 43%);
+      color: white;
+    }
+    h2{
+      color: hsl(179, 62%, 43%);
+    }
+    .day{
+      color: hsl(71, 73%, 54%);
+    }
+    h1,h2,h3{
+      margin-bottom: 20px;
+    }
+    h1>span{
+      font-size: 16px;
+      opacity: .7;
+    }
+    .btn{
+      padding: 10px;
+      border: 0 none;
+      color: white;
+      border-radius: 10px;
+      margin-top: 20px;
+      width: 100%;
+      background-color: hsl(71, 73%, 54%);
+    }
+    p{
+      opacity: .7;
+    }
+    .grid3{
+      grid-area: grid3;
+      background-color: hsl(179, 50%, 52%);
+      color: white;
+    }
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="grid-container">
+    <div class="grid1"> 
+      <h2>Join our community</h2>
+
+      <h3 class="day">30-day, hassle-free money back guarantee</h3>
+      <p> Gain access to our full library of tutorials along with expert code reviews. 
+        Perfect for any developers who are serious about honing their skills.</p>
+     </div>
+
+    <div class="grid2">
+      <h3> Monthly Subscription</h3>
+
+      <h1>&dollar;29 <span>per month</span></h1>
+    
+      <p>Full access for less than &dollar;1 a day</p>
+    
+      <button class="btn">Sign Up</button>
+    </div>
+    <div class="grid3"> 
+      <h3>Why Us</h3>
+
+      <p>Tutorials by industry experts
+        Peer &amp; expert code review
+        Coding exercises
+        Access to our GitHub repos
+        Community forum
+        Flashcard decks
+        New videos every week</p>
+      </div>
+  </div>
+  
+
+ 
+
+ 
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://www.frontendmentor.io/profile/thidarnyien">Thidar Nyein</a>.
+    </p>
+  </footer>
+</body>
+</html>
